@@ -98,7 +98,6 @@ public class BearFishGame {
         Scanner s=new Scanner(System.in);
 
         Bear b=new Bear(0, 0, 1);
-
         Fish f=new Fish((int)(Math.random()*20), (int)(Math.random()*10), 1);
 
         while(!b.collide(f)){

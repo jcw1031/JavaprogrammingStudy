@@ -30,8 +30,8 @@ public class QueueTest {
     public static void main(String[] args) {
         Structure q = new Structure();
         for(int i=0;i<10;i++){
-            q.Enqueue(i);
-            System.out.println(i+" 삽입 : "+q.index+"개 데이터 존재");
+            q.Enqueue((int)(Math.random()*100));
+            System.out.println(q.queue[i]+"\t삽입 : "+q.index+"개 데이터 존재");
         }
         for(int i=0;i<15;i++){
             if(q.isEmpty()) {
@@ -39,7 +39,7 @@ public class QueueTest {
                 break;
             }
             else{
-                System.out.println(q.Dequeue()+" 삭제 : "+q.index+"개 데이터 존재");
+                System.out.println(q.Dequeue()+"\t삭제 : "+q.index+"개 데이터 존재");
             }
         }
     }

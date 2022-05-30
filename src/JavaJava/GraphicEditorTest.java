@@ -110,6 +110,9 @@ public class GraphicEditorTest {
                         }
                     }
                 }
+                case 4->{
+                    break;
+                }
                 default -> System.out.println("입력 잘못 함");
             }
         }

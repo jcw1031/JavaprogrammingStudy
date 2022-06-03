@@ -1,9 +1,7 @@
 package classPractice;
 
 class Shape{
-    double getArea(){
-        return 0;
-    }
+
 }
 class Rectangle extends Shape{
     double length;
@@ -31,7 +29,7 @@ public class ShapeTest {
         Shape obj1=new Rectangle(10, 20);
         Shape obj2 = new Circle1(10);
 
-        System.out.println(obj1.getArea());
-        System.out.println(obj2.getArea());
+        System.out.println(((Rectangle)obj1).getArea());
+        System.out.println(((Circle1)obj2).getArea());
     }
 }

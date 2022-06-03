@@ -9,6 +9,9 @@ class BankAccount{
     public void withdraw(int n){
         balance-=n;
     }
+    public String toString(){
+        return ""+this.balance;
+    }
 }
 public class BankAccountTest {
     public static void main(String[] args) {

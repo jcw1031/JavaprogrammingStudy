@@ -23,6 +23,6 @@ public class BankAccountTest {
         myAccount.deposit(100000000);
         System.out.println(myAccount);
         myAccount.withdraw(26900000);
-        System.out.println(myAccount);
+        System.out.println(myAccount); 
     }
 }

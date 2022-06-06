@@ -2,8 +2,8 @@ package JavaJava;
 
 interface Queue{
     boolean isEmpty(); //큐가 비어 있는지 검사
-    void Enqueue(int x); //큐에 데이터 삽입
-    int Dequeue(); //큐에서 데이터 삭제(출력)
+    void enqueue(int x); //큐에 데이터 삽입
+    int dequeue(); //큐에서 데이터 삭제(출력)
 }
 
 class Structure implements Queue{
@@ -17,12 +17,12 @@ class Structure implements Queue{
     }
 
     @Override
-    public void Enqueue(int x) {
+    public void enqueue(int x) {
         queue[index++]=x;
     }
 
     @Override
-    public int Dequeue() {
+    public int dequeue() {
         return queue[--index];
     }
 }
@@ -30,7 +30,7 @@ public class QueueTest {
     public static void main(String[] args) {
         Structure q = new Structure();
         for(int i=0;i<10;i++){
-            q.Enqueue((int)(Math.random()*100));
+            q.enqueue((int)(Math.random()*100));
             System.out.println(q.queue[i]+"\t삽입 : "+q.index+"개 데이터 존재");
         }
         for(int i=0;i<15;i++){
@@ -39,7 +39,7 @@ public class QueueTest {
                 break;
             }
             else{
-                System.out.println(q.Dequeue()+"\t삭제 : "+q.index+"개 데이터 존재");
+                System.out.println(q.dequeue()+"\t삭제 : "+q.index+"개 데이터 존재");
             }
         }
     }

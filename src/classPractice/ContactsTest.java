@@ -9,7 +9,6 @@ class Contacts{
         this.name=name; this.call=call; this.email=email;
         count++;
     }
-
     //get set 쭉 만들어주고
 }
 public class ContactsTest {

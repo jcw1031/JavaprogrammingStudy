@@ -33,7 +33,7 @@ public class GraphicEditorTest {
         int input=0;
         Shape shape=null;
         Shape shapeStart=null;
-        Shape tmp=null;
+        Shape tmp;
         int length=0;
 
         while(input!=4){

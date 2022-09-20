@@ -1,14 +1,18 @@
+package Chapter14;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 class Event extends JFrame{
     JButton[] cal;
+    JLabel jbtest;
     String[] name = {"Backspace"," "," ","CE","C","7","8","9","/","sqrt","4","5","6","x",
-                        "%","1","2","3","-","1/x","0","+/-",".","+","="};
+            "%","1","2","3","-","1/x","0","+/-",".","+","="};
     JTextField tField;
 
     double result = 0;
+    String operation;
     boolean flag = false;
 
     JPanel button;
@@ -62,7 +66,11 @@ class Event extends JFrame{
 
             switch (tmp){
                 case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" : {
-                    if(!tField.getText().equals("0")){
+                    if(flag){
+                        tField.setText(tmp);
+                        flag = false;
+                    }
+                    else if(!tField.getText().equals("0")){
                         tField.setText(tField.getText()+tmp);
                     }
                     else{
@@ -84,19 +92,27 @@ class Event extends JFrame{
                 }
                 case "CE", "C" : {
                     tField.setText("0");
+                    flag = false;
+                    operation = null;
+                    result = 0;
                     break;
                 }
                 case "+", "-", "*", "/", "%" : {
-                    flag = true;
+                    if(!flag){
+                        flag = true;
+                        operation = tmp;
+                    }
 
                     break;
                 }
+                case "=" : {
+
+                }
             }
-            flag = false;
         }
     }
 }
-public class EventTest {
+public class CalculateTest {
     public static void main(String[] args) {
         new Event();
     }

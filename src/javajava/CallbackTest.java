@@ -1,4 +1,4 @@
-package JavaJava;
+package javajava;
 
 import java.awt.event.*;
 import javax.swing.Timer;

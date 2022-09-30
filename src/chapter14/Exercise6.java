@@ -1,6 +1,5 @@
-package Chapter14;
+package chapter14;
 
-import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 

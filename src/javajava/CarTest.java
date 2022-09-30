@@ -1,4 +1,4 @@
-package JavaJava;
+package javajava;
 
 abstract class Car{
     abstract public int speed();

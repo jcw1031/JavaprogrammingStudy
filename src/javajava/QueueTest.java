@@ -1,4 +1,4 @@
-package JavaJava;
+package javajava;
 import java.util.*;
 
 interface Queue{

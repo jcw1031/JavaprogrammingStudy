@@ -1,4 +1,4 @@
-package JavaJava;
+package javajava;
 
 interface A1 {
     public void aMethod();

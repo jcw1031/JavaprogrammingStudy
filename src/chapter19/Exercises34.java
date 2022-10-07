@@ -21,6 +21,7 @@ class Customer implements Runnable{
     @Override
     public void run(){
         for(int i=1;i<=200;i++){
+
             System.out.println(name+" : "+i+"번째");
             if(same_a.getTotal()>=500000) break;
             same_a.deposit();
@@ -35,6 +36,7 @@ class Customer implements Runnable{
 public class Exercises34 {
     public static void main(String[] args) throws Exception{
         Account account = new Account();
+
         Customer donator1 = new Customer(account, "1번째 성금자");
         Customer donator2 = new Customer(account, "2번째 성금자");
         Customer donator3 = new Customer(account, "3번째 성금자");

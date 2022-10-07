@@ -1,14 +1,29 @@
 import java.util.*;
 
-public class Main{
-    public static void main(String[] args) {
-        Queue<String> queue = new LinkedList<>();
-        HashSet<Integer> set = new HashSet<>();
-
-        for(int i=0;i<10;i++){
-            set.add(i);
+class ThreadA extends Thread{
+    @Override
+    public void run(){
+        for(int i=0;i<100;i++){
+            System.out.println("a");
         }
-        System.out.println(set.add(4));
-        System.out.println(set);
+    }
+}
+
+class ThreadB extends Thread{
+    @Override
+    public void run(){
+        for(int i=0;i<100;i++){
+            System.out.println("b");
+        }
+    }
+}
+
+public class Main{
+    public static void main(String[] args) throws InterruptedException {
+        ThreadA threadA = new ThreadA();
+        ThreadB threadB = new ThreadB();
+
+        threadA.start();
+        threadB.start();
     }
 }

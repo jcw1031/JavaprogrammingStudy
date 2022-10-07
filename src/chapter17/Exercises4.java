@@ -30,7 +30,7 @@ class Circle extends Shape{
 
 public class Exercises4 {
     public static void main(String[] args) {
-        Vector<Object> vector = new Vector<>();
-
+        Vector<Shape> vector = new Vector<>();
+        System.out.println();
     }
 }

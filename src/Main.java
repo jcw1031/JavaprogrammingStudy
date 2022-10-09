@@ -1,29 +1,22 @@
-import java.util.*;
-
-class ThreadA extends Thread{
+class ThreadExample implements Runnable {
     @Override
-    public void run(){
-        for(int i=0;i<100;i++){
-            System.out.println("a");
+    public void run() {
+        System.out.println("thread start.");
+        for(int i=0;i<100;i++) {
+            System.out.println(i);
         }
+        System.out.println("thread end.");
     }
 }
 
-class ThreadB extends Thread{
-    @Override
-    public void run(){
-        for(int i=0;i<100;i++){
-            System.out.println("b");
-        }
-    }
-}
-
-public class Main{
+public class Main {
     public static void main(String[] args) throws InterruptedException {
-        ThreadA threadA = new ThreadA();
-        ThreadB threadB = new ThreadB();
+        ThreadExample r = new ThreadExample();
+        Thread thread = new Thread(r);
 
-        threadA.start();
-        threadB.start();
+        thread.start();
+//        thread.join();
+
+        System.out.println("main end.");
     }
 }

@@ -10,6 +10,8 @@ class Example1Test extends JFrame implements ActionListener {
     private JButton[] jb;
     private ImageIcon[] ii;
     private JLabel jl;
+    private Image[] img;
+
     public Example1Test(){
         jl = new JLabel();
 
@@ -18,8 +20,16 @@ class Example1Test extends JFrame implements ActionListener {
         jb[1] = new JButton("배");
 
         ii = new ImageIcon[2];
-        ii[0] = new ImageIcon("사과.jpg");
-        ii[1] = new ImageIcon("배.jpg");
+        ii[0] = new ImageIcon("src/사과.jpg");
+        ii[1] = new ImageIcon("src/배.jpg");
+
+        img = new Image[2];
+
+        img[0] = ii[0].getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        img[1] = ii[1].getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+
+        ii[0] = new ImageIcon(img[0]);
+        ii[1] = new ImageIcon(img[1]);
 
         ct.setLayout(new FlowLayout());
         ct.add(jb[0]);

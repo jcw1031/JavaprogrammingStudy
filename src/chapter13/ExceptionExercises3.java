@@ -18,6 +18,7 @@ public class ExceptionExercises3 {
             }
             catch(InputMismatchException e){
                 System.out.println("정수 아님. 다시 입력.");
+                Object garbage = sc.next();
                 i--;
             }
         }

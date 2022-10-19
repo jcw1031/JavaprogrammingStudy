@@ -64,7 +64,7 @@ class Event extends JFrame{
         public void actionPerformed(ActionEvent e){
             String tmp = e.getActionCommand();
 
-            switch (tmp){
+            /*switch (tmp){
                 case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" : {
                     if(flag){
                         tField.setText(tmp);
@@ -108,7 +108,7 @@ class Event extends JFrame{
                 case "=" : {
 
                 }
-            }
+            }*/
         }
     }
 }

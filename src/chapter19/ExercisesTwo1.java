@@ -28,14 +28,14 @@ public class ExercisesTwo1 extends JFrame {
         setVisible(true);
         setSize(300, 300);
 
-        setContentPane(new myPanel());
+        setContentPane(new MyPanel());
     }
 
     public static void main(String[] args) {
         new ExercisesTwo1();
     }
 
-    class myPanel extends JPanel{
+    class MyPanel extends JPanel{
         Thread th = null;
         public void paintComponent(Graphics g) {
             super.paintComponents(g);

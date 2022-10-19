@@ -43,14 +43,15 @@ public class QueueTest {
             input=s.nextLine();
 
             switch(input){
-                case "delete" -> {
+                case "delete" : {
                     if(q.isEmpty()){
                         System.out.println("데이터 없음");
                     }
                     else
                         q.deQueue();
+                    break;
                 }
-                case "delete all" -> {
+                case "delete all" : {
                     for(int i=q.front;i<q.rear;i++){
                         if(q.isEmpty()) {
                             System.out.println("데이터가 없습니다.");
@@ -60,9 +61,10 @@ public class QueueTest {
                             System.out.println(q.deQueue()+"\t삭제 : "+(q.rear-q.front)+"개 데이터 존재");
                         }
                     }
+                    break;
                 }
-                case "exit" ->{w=false;}
-                default -> {
+                case "exit" : {w=false; break;}
+                default : {
                     q.enQueue(Integer.parseInt(input));
                 }
             }

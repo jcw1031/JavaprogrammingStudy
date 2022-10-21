@@ -5,37 +5,6 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-class MovingThread extends Thread{
-    Container ct;
-    JLabel jl;
-    int x, y;
-
-    public MovingThread(Container ct, JLabel jl, int x, int y) {
-        this.ct = ct;
-        this.jl = jl;
-        this.x = x;
-        this.y = y;
-    }
-
-    @Override
-    public void run() {
-        while (true) {
-            y-=5;
-            if(y<=0){
-                ct.remove(jl);
-                break;
-            }
-            try {
-                sleep(20);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-            jl.setLocation(x, y);
-        }
-    }
-}
-
 class BubbleGame extends JFrame {
     private Container ct;
 

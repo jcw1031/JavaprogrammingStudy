@@ -44,6 +44,7 @@ class WordGame extends JFrame {
     private JButton jb;
 
     public WordGame() throws FileNotFoundException, InterruptedException {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ct = getContentPane();
         ct.setLayout(null);
         jl = new JLabel("sfasdf");

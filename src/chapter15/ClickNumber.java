@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-class Main extends MouseAdapter {
+class RandomMain extends MouseAdapter {
     public void mouseClick(MouseEvent e){
         JLabel tmp = (JLabel) e.getSource();
         tmp.setVisible(false);

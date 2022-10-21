@@ -35,6 +35,7 @@ class Snow extends JFrame {
     private Container ct;
 
     public Snow(){
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ct = getContentPane();
         ct.setLayout(null);
 
@@ -51,10 +52,13 @@ class Snow extends JFrame {
         jl.setIcon(icon);
         jl.setSize(800, 800);
 //        ct.add(jl);
-        setContentPane(jl);
+//        setContentPane(jl);
+
         jl.setLocation(0, 0);
 
+        jl.add(new SnowPanel());
         SnowPanel sp = new SnowPanel();
+        jl.setLayout(null);
         ct.add(sp);
 
 //        setContentPane(new SnowPanel());
@@ -62,7 +66,7 @@ class Snow extends JFrame {
 
 
 
-        setTitle("눈 내리는 샤갈의 뭐시기");
+        setTitle("눈 내리는 샤갈의 마을");
         setVisible(true);
         setSize(800, 800);
     }
